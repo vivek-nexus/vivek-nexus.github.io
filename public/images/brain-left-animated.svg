@@ -1,0 +1,31 @@
+<svg width="200" height="289" viewBox="0 0 200 289" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="gradient1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(179.134 138.635) rotate(180) scale(165.295 134.549)">
+      <stop id="stop1-1" stop-color="#992109" />
+      <stop id="stop2-1" offset="1" stop-color="#992109" />
+    </radialGradient>
+  </defs>
+
+  <!-- Path with gradient fill -->
+  <path d="M195.826 223.451C198.363 214.301 199.178 203.14 199.2 191.22L197.365 63.7203C195.928 33.5284 189.77 8.12107 168.504 3.09531C132.009 -5.52973 98.625 3.09531 55.2789 38.7917C11.2501 66.4703 -11.6249 143.345 6.00003 187.22C19.777 221.516 33.1207 229.105 48.7296 230.715C53.4936 263.24 84.4683 288.345 121.969 288.345C162.219 288.345 194.95 259.425 195.826 223.451Z" 
+        fill="url('#gradient1')">
+  
+    <!-- Animate the gradient color stops -->
+    <animate 
+        href="#stop1-1" 
+        attributeName="stop-color" 
+        from="#992109" 
+        to="#CC9B6B"
+        begin="1.75s" 
+        dur="0.25s" 
+        fill="freeze" />
+    <animate 
+        href="#stop2-1" 
+        attributeName="stop-color" 
+        from="#992109" 
+        to="#862613"
+        begin="1.75s" 
+        dur="0.25s" 
+        fill="freeze" />
+  </path>
+</svg>

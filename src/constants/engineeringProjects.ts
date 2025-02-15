@@ -49,7 +49,7 @@ export const engineeringProjects = [
     },
     {
         title: "Figma plugins",
-        description: `Variables ⇔ CSV import export and Variables inspector`,
+        description: `Plugins to export/import variables from CSV and to debug variables in prototypes`,
         repoLink: "https://github.com/vivek-nexus?tab=repositories&q=figma",
         stats: [
             {

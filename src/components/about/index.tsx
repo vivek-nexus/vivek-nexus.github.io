@@ -49,6 +49,7 @@ export function About() {
                         className="relative col-span-3 md:col-span-1 h-64 rounded-2xl text-lg border border-white3">
                         <DirectionAwareHover
                             imageUrl={"/images/about-me-1.webp"}
+                            imageAlt="Image of me commissioning a petrol station"
                             className="photo-vignette"
                         >
                             <p className="p-4 pb-0 font-bold">Petrol station commissioning</p>
@@ -87,6 +88,7 @@ export function About() {
                     >
                         <DirectionAwareHover
                             imageUrl={"/images/about-me-2.webp"}
+                            imageAlt="Image of me doing UX research"
                             className="photo-vignette"
                         >
                             <p className="p-4 pb-0 font-bold">UXR on the field</p>

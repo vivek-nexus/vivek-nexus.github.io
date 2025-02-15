@@ -27,7 +27,7 @@ export function Contact() {
                 </div>
                 <footer>
                     <p className="text-sm md:text-base">
-                        Hand built with Next.js + Tailwind CSS and animated with Motion. Contains&nbsp;
+                        Hand built with Next.js + Tailwind CSS. Contains&nbsp;
                         <TooltipProvider>
                             <Tooltip delayDuration={100}>
                                 <TooltipTrigger asChild>

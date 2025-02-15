@@ -31,14 +31,16 @@ export function Engineering() {
             <ShootingStars
                 minDelay={500}
                 maxDelay={2500}
+                className="-z-50"
             />
             <StarsBackground
                 twinkleProbability={1}
                 starDensity={0.00055}
+                className="-z-50"
             />
             <div className="max-w-[1024px] mx-auto px-6">
                 <h2 className="text-5xl md:text-7xl text-center font-extralight mb-12">Engineering</h2>
-                <div className="grid grid-cols-2 gap-12">
+                <div className="grid grid-cols-2 gap-12 mb-8">
                     {engineeringProjects.map((engineeringProject, index) => {
                         return (
                             <EngineeringProjectCard
@@ -54,6 +56,18 @@ export function Engineering() {
                         )
                     })}
                 </div>
+                <a
+                    href="https://github.com/vivek-nexus"
+                    target="_blank"
+                    className="w-fit mx-auto font-bold flex gap-2 justify-center items-center group"
+                >
+                    More projects
+                    <img
+                        src="/icons/north-east-arrow.svg"
+                        alt="North east arrow icon indicating that the link opens in a new tab"
+                        className="h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 duration-300 ease-in-out"
+                    />
+                </a>
             </div>
         </section>
     )

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Vivek G',
     type: 'website',
     url: 'https://viveknexus.com',
-    description: 'Opinionated designer + action biased engineer. Currently Senior Product Designer at BrowserStack.',
+    description: 'Opinionated designer + Action biased engineer. Currently Senior Product Designer at BrowserStack.',
     images: [
       {
         url: 'https://viveknexus.com/images/link-preview-1.png',

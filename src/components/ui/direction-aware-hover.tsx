@@ -7,12 +7,14 @@ import { cn } from "@/lib/utils"
 
 export const DirectionAwareHover = ({
     imageUrl,
+    imageAlt,
     children,
     childrenClassName,
     imageClassName,
     className,
 }: {
-    imageUrl: string
+    imageUrl: string,
+    imageAlt: string,
     children: React.ReactNode | string
     childrenClassName?: string
     imageClassName?: string
@@ -100,7 +102,7 @@ export const DirectionAwareHover = ({
                         }}
                     >
                         <Image
-                            alt="image"
+                            alt={imageAlt}
                             className={cn(
                                 "h-full w-full object-cover scale-[1.15]",
                                 imageClassName

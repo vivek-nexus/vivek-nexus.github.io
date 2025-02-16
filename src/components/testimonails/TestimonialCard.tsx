@@ -124,7 +124,7 @@ export const TestimonialCard = ({
                             “
                         </p>
                         <div className="mb-8 text-white2 font-light">
-                            <p>
+                            <p className="whitespace-pre-wrap">
                                 {item.quote}
                             </p>
                         </div>

@@ -9,13 +9,13 @@ const suse = SUSE({
 
 export const metadata: Metadata = {
   title: 'Vivek G',
-  description: 'Opinionated designer + action biased engineer. Currently Senior Product Designer at BrowserStack.',
+  description: 'Opinionated designer + action biased engineer. Currently Senior Product Designer at BrowserStack. Welcome to my portfolio.',
   icons: "/favicon.ico",
   openGraph: {
     title: 'Vivek G',
     type: 'website',
     url: 'https://viveknexus.com',
-    description: 'Opinionated designer + Action biased engineer. Currently Senior Product Designer at BrowserStack.',
+    description: 'Opinionated designer + Action biased engineer. Currently Senior Product Designer at BrowserStack. Welcome to my portfolio.',
     images: [
       {
         url: 'https://viveknexus.com/images/link-preview-1.png',

@@ -22,7 +22,7 @@ export function About() {
             id="about"
             className="max-w-[1024px] mx-auto px-6 font-extralight py-12 md:py-24 md:pt-12 md:pb-24"
         >
-            <h2 className="text-5xl md:text-7xl text-center mb-12">About Me?</h2>
+            <h2 className="text-5xl md:text-7xl text-center mb-12">About me?</h2>
             <div className="md:hidden">
                 <div className="mb-4">
                     <AboutText number={1} />

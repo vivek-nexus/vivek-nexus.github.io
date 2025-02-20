@@ -30,7 +30,7 @@ export const designProjects = [
         gradientColourHex: "0075BF",
         gradientStartOpacity: 95,
         title: "Learn frontend",
-        description: "Creating a brand identity and designing the interface of Clear Frontend — an open source project that helps developers learn frontend through coding challenges.",
+        description: "Creating a brand identity and designing the interface of Clear Frontend—an open source platform that helps developers learn frontend through coding challenges.",
         skills: ["Visual design", "Logo design", "UI Design"],
         linkText: "Clear Frontend website",
         hyperLink: "https://clearfrontend.vercel.app/",

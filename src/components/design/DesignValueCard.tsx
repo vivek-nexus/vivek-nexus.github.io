@@ -1,5 +1,4 @@
 import { designValues } from "@/constants/designValues"
-import { hexToRgba } from "@/lib/utils"
 import { motion } from "motion/react"
 import { useEffect, useRef, useState } from "react"
 
@@ -7,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, className?: string }) {
     const [showText1, setShowText1] = useState(true)
     const [showText2, setShowText2] = useState(false)
-    const card = useRef<HTMLDivElement>(null)
+    const card = useRef<HTMLButtonElement>(null)
 
     function handleMouseEnter() {
         setShowText1(false)
@@ -31,21 +30,6 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
         }
     }
 
-    function getRotation(number: number) {
-        switch (number) {
-            case 1:
-                return `lg:-rotate-6`
-            case 2:
-                return `lg:rotate-6`
-            case 3:
-                return `lg:-rotate-12`
-            case 4:
-                return `lg:rotate-12`
-            default:
-                break
-        }
-    }
-
     useEffect(() => {
         // React synthetic events don't support passive false, which is needed to call event.preventDefault() to cancel mouse events https://web.dev/articles/mobile-touchandmouse#1_-_clicking_and_tapping_-_the_natural_order_of_things
         card.current?.addEventListener("touchstart", handleTouch, { passive: false })
@@ -57,9 +41,9 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
     }, [])
 
     return (
-        <div
+        <button
             ref={card}
-            className={`design-value-card relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl ${getRotation(number)} flex justify-center items-center text-base md:text-lg lg:text-2xl ${className ? className : ``}`}
+            className={`design-value-card cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl flex justify-center items-center text-base md:text-lg lg:text-2xl ${className ? className : ``}`}
             style={{
                 // Gradient border
                 border: "solid 1px transparent",
@@ -67,7 +51,6 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
                 backgroundOrigin: "border-box",
                 backgroundClip: "padding-box, border-box",
             }}
-            role="tooltip"
             tabIndex={0}
             onMouseOver={handleMouseEnter}
             onMouseLeave={handleMouseOut}
@@ -83,7 +66,7 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, type: "tween", ease: "easeIn" }}
                     className="text-center font-extralight text-white2 p-6">
-                    {designValues[number].text1}
+                    {designValues[number].text1},
                 </motion.p>}
             {showText2 &&
                 <motion.p
@@ -94,13 +77,6 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
                     className="text-center font-extralight text-primaryGreen p-6">
                     {designValues[number].text2}
                 </motion.p>}
-            <div
-                className="absolute -bottom-14 lg:-bottom-16 w-full h-1/4 rounded-2xl blur-md -z-10 pointer-events-none"
-                style={{
-                    background: `linear-gradient(180deg, ${hexToRgba("--primary-blue", 0.15)} 5.12%, #101010 100%)`
-                }}
-            >
-            </div>
-        </div>
+        </button>
     )
 }

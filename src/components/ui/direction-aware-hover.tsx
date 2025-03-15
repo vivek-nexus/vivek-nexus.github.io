@@ -81,12 +81,12 @@ export const DirectionAwareHover = ({
         >
             <AnimatePresence mode="wait">
                 <motion.div
-                    role="tooltip"
+                    role="button"
                     tabIndex={0}
                     onMouseEnter={handleMouseEnter}
                     onFocus={handleFocus}
                     ref={ref}
-                    className="relative h-full w-full group/card"
+                    className="relative h-full w-full group/card cursor-default"
                     initial="initial"
                     whileHover={direction}
                     whileFocus={direction}

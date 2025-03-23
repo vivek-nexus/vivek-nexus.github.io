@@ -43,7 +43,7 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
     return (
         <button
             ref={card}
-            className={`design-value-card cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl flex justify-center items-center text-base md:text-lg lg:text-2xl ${className ? className : ``}`}
+            className={`design-value-card group cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl overflow-clip flex justify-center items-center text-base md:text-lg lg:text-2xl ${className ? className : ``}`}
             style={{
                 // Gradient border
                 border: "solid 1px transparent",
@@ -59,6 +59,12 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
             // Touch events added to the ref
             aria-label={`${designValues[number].text1}, ${designValues[number].text2.toLowerCase()}`}
         >
+            <div className={`absolute ${showText1 && `opacity-100`} ${showText2 && `opacity-0`} delay-250 duration-500 ease-in flex items-end ${number % 2 === 0 ? `right-0 -scale-x-100` : `left-0`} -bottom-0 w-1/2 h-1/2`}>
+                <img src="/images/bg-circles.svg" alt="" />
+            </div>
+            <div className={`absolute ${showText1 && `opacity-0`} ${showText2 && `opacity-100`} delay-250 duration-500 ease-in flex items-start justify-end ${number % 2 === 0 ? `left-0 -scale-x-100` : `right-0`} -top-0 w-1/2 h-1/2`}>
+                <img src="/images/bg-squares.svg" alt="" />
+            </div>
             {showText1 &&
                 <motion.p
                     initial={{ opacity: 0 }}

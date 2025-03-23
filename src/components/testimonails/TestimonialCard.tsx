@@ -123,8 +123,8 @@ export const TestimonialCard = ({
                         >
                             “
                         </p>
-                        <div className="mb-8 text-white2 font-light">
-                            <p className="whitespace-pre-wrap line-clamp-[12] md:line-clamp-[8] group-hover:line-clamp-none group-active:line-clamp-none group-focus-within:line-clamp-none">
+                        <div className="pb-8 text-white2 font-light max-h-64 overflow-y-auto hide-scroll-bar [mask-image:linear-gradient(to_top,transparent,white_20%)]">
+                            <p className="whitespace-pre-wrap">
                                 {item.quote}
                             </p>
                         </div>

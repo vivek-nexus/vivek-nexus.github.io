@@ -13,7 +13,7 @@ const spaceMono = Space_Mono({
 export function NavItem({ alphabet }: { alphabet: ActiveSection }) {
     const key = useRef<HTMLAnchorElement>(null)
     const router = useRouter()
-    const activeSection = useGlobalStore(state => state.activeSection)
+    const { activeSection, setShowEasterEggMessage } = useGlobalStore()
 
     function isModifierKeyPressed(keyboardEvent: KeyboardEvent) {
         return (keyboardEvent.altKey || keyboardEvent.ctrlKey || keyboardEvent.metaKey || keyboardEvent.shiftKey)
@@ -26,6 +26,7 @@ export function NavItem({ alphabet }: { alphabet: ActiveSection }) {
                 const pressedKey = event.key.toUpperCase() as ActiveSection
                 if (pressedKey.toLocaleUpperCase() === alphabet) {
                     key.current?.click()
+                    setShowEasterEggMessage(true)
                     key.current?.setAttribute("data-pressed", "true")
                     setTimeout(() => {
                         key.current?.removeAttribute("data-pressed")

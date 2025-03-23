@@ -27,7 +27,7 @@ export default function Home() {
   useIsTouchDevice()
 
   useEffect(() => {
-    fetch("https://render-express-server-q222.onrender.com/ip")
+    fetch("https://express.viveknexus.com/ip")
       .then((response) => {
         response.text()
           .then((text) => {

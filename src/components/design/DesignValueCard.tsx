@@ -60,11 +60,11 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
             aria-label={`${designValues[number].text1}, ${designValues[number].text2.toLowerCase()}`}
         >
             {/* Circle background */}
-            <div className={`absolute ${showText1 && `bottom-0`} ${showText2 && `-bottom-16`} duration-300 ease-in flex items-end ${number % 2 === 0 ? `right-0 -scale-x-100` : `left-0`} w-1/2 h-1/2`}>
+            <div className={`absolute ${showText1 && `bottom-0`} ${showText2 && `-bottom-16`} duration-300 ease-in-out flex items-end ${number % 2 === 0 ? `right-0 -scale-x-100` : `left-0`} w-1/2 h-1/2`}>
                 <img src="/images/bg-circles.svg" alt="" />
             </div>
             {/* Square background */}
-            <div className={`absolute ${showText1 && `-top-16`} ${showText2 && `top-0`} duration-300 ease-in flex items-start justify-end ${number % 2 === 0 ? `left-0 -scale-x-100` : `right-0`} w-1/2 h-1/2`}>
+            <div className={`absolute ${showText1 && `-top-16`} ${showText2 && `top-0`} duration-300 ease-in-out flex items-start justify-end ${number % 2 === 0 ? `left-0 -scale-x-100` : `right-0`} w-1/2 h-1/2`}>
                 <img src="/images/bg-squares.svg" alt="" />
             </div>
             {showText1 &&
@@ -72,7 +72,7 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
                     initial={{ y: 64, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -64, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="text-center font-extralight text-white2 p-6">
                     {designValues[number].text1},
                 </motion.p>}
@@ -81,7 +81,7 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
                     initial={{ y: -64, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 64, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="text-center font-extralight text-primaryGreen p-6">
                     {designValues[number].text2}
                 </motion.p>}

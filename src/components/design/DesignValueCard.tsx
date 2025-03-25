@@ -1,12 +1,14 @@
 import { designValues } from "@/constants/designValues"
 import { motion } from "motion/react"
 import { useEffect, useRef, useState } from "react"
+import { useInView } from "react-intersection-observer"
 
 
 export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, className?: string }) {
     const [showText1, setShowText1] = useState(true)
     const [showText2, setShowText2] = useState(false)
     const card = useRef<HTMLButtonElement>(null)
+    const { ref, inView } = useInView({ threshold: 0 })
 
     function handleMouseEnter() {
         setShowText1(false)
@@ -42,8 +44,8 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
 
     return (
         <button
-            ref={card}
-            className={`design-value-card group cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl overflow-clip flex justify-center items-center text-base md:text-lg lg:text-2xl ${className ? className : ``}`}
+            ref={ref}
+            className={`design-value-card ${inView ? 'div-shimmer' : ''} group cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl overflow-clip flex justify-center items-center text-base md:text-lg lg:text-2xl ${className ? className : ``}`}
             style={{
                 // Gradient border
                 border: "solid 1px transparent",

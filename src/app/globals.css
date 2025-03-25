@@ -56,6 +56,33 @@ html {
     animation: shimmer linear 4s infinite;
 }
 
+.div-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.div-shimmer::after {
+    opacity: 0;
+    height: 200%;
+    width: 200%;
+    content: '';
+    rotate: 45deg;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 40%, rgba(255, 255, 255, 0.1), transparent 60%);
+    animation: div-shimmer 2s linear;
+}
+
+@keyframes div-shimmer {
+    0% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
 .photo-vignette {
     mask-image:
         linear-gradient(to bottom, transparent, white 7%),

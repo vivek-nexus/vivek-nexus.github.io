@@ -65,8 +65,9 @@ export default function RootLayout({
       <head>
         <link rel="preload" as="image" href="/images/background-grid.svg" />
       </head>
+      {/* Absolutely positioned <hr> in the design section takes up more than screen width (100vw includes scrollbar width. Hence simplest solution is to clip it off.*/}
       <body
-        className={`${suse.className} antialiased bg-black1 text-white2`}
+        className={`${suse.className} antialiased bg-black1 text-white2 overflow-x-clip`}
       >
         {children}
       </body>

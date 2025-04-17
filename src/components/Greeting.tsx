@@ -27,17 +27,16 @@ export function Greeting({ userIp }: { userIp: string }) {
                 }
             }}
         >
-            <motion.div
-                animate={{
-                    scale: 1.12,
-                    transition: {
-                        duration: 4,
-                        ease: "easeIn"
-                    }
-                }}
-                className="will-change-transform"
-            >
-                <p className="mb-4 text-sm md:text-2xl">
+            <div>
+                <motion.p
+                    animate={{
+                        letterSpacing: "2px",
+                        transition: {
+                            duration: 4,
+                            ease: "linear"
+                        }
+                    }}
+                    className="mb-4 text-sm md:text-2xl">
                     Hello human at&nbsp;
                     <TooltipProvider>
                         <Tooltip delayDuration={100}>
@@ -49,11 +48,22 @@ export function Greeting({ userIp }: { userIp: string }) {
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
-                </p>
-                <h2 className="text-2xl md:text-5xl font-extralight mb-9 bg-gradient-to-b from-white to-white3 text-gradient">
+                </motion.p>
+                <motion.h2
+                    initial={{
+                        letterSpacing: "4px"
+                    }}
+                    animate={{
+                        letterSpacing: "2px",
+                        transition: {
+                            duration: 4,
+                            ease: "linear"
+                        }
+                    }}
+                    className="text-2xl md:text-5xl font-extralight mb-9 bg-gradient-to-b from-white to-white3 text-gradient">
                     Welcome to my corner on the internet!
-                </h2>
-            </motion.div>
+                </motion.h2>
+            </div>
         </motion.section >
     )
 }

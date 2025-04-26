@@ -4,7 +4,7 @@ import Confetti from 'react-confetti'
 
 export function Testimonials() {
     return (
-        <section id="testimonials" className="relative">
+        <section id="testimonials" className="relative overflow-y-clip">
             <Confetti
                 opacity={0.5}
                 numberOfPieces={25}

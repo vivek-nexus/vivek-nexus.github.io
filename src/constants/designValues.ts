@@ -1,7 +1,7 @@
 export const designValues = {
     1: {
         text1: "Good design is good business",
-        text2: "...when quality matters"
+        text2: "...above a quality threshold"
     },
     2: {
         text1: "Design multiplies original value",

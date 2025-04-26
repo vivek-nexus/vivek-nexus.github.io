@@ -6,7 +6,7 @@ export const engineeringProjects = [
         stats: [
             {
                 name: "Users",
-                value: "2000+",
+                value: "1500+/day",
                 iconURI: "user.svg"
             },
             {

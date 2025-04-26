@@ -29,13 +29,13 @@ export function Engineering() {
             className={`relative ${spaceMono.className} py-36 md:py-48 [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_95%,transparent)]`}
         >
             <ShootingStars
-                minDelay={500}
+                minDelay={250}
                 maxDelay={2500}
                 className="-z-50"
             />
             <StarsBackground
                 twinkleProbability={1}
-                starDensity={0.00055}
+                starDensity={0.002}
                 className="-z-50"
             />
             <div className="max-w-[1024px] mx-auto px-6">

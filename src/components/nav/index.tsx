@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "motion/react"
-import { transitionSpring, transitionTween } from "../hero"
+import { transition1, transition2 } from "../hero"
 import { NavItem } from "./NavItem"
 import { useEffect, useState } from "react"
 import { useGlobalStore } from "@/stores/GlobalStore"
@@ -34,16 +34,19 @@ export function Nav() {
             variants={{
                 firstAnimation: {
                     opacity: 0.01,
-                    transition: transitionTween
+                    transition: transition1
                 },
                 secondAnimation: {
                     opacity: 1,
-                    transition: transitionSpring
+                    transition: transition2
                 },
             }}
             onAnimationComplete={() => {
                 if (animationName === "firstAnimation") {
-                    setAnimationName("secondAnimation")
+                    // Don't have proper callback from hero component for animation end, so hardcoded timeout
+                    setTimeout(() => {
+                        setAnimationName("secondAnimation")
+                    }, 2500)
                 }
             }}
         >

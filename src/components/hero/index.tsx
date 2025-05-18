@@ -6,19 +6,30 @@ import { BackgroundLines } from "../ui/background-lines"
 import { useGlobalStore } from "@/stores/GlobalStore"
 import { useInView } from "react-intersection-observer"
 
-
-export const transitionTween = {
-    type: "tween",
-    ease: [0.48, 0.01, 0.4, 1.4],
-    duration: 2,
+export const transition1 = {
+    type: "spring",
+    stiffness: 160,
+    damping: 30,
+    mass: 1.2,
+    duration: 1,
 }
 
-export const transitionSpring = {
+export const transition2 = {
     type: "spring",
-    stiffness: 460.8,
-    damping: 48,
-    mass: 1,
-    duration: 0.25
+    stiffness: 160,
+    damping: 30,
+    mass: 1.2,
+    duration: 1,
+}
+
+// For white bg splash
+export const transition2A = {
+    type: "spring",
+    stiffness: 160,
+    damping: 30,
+    mass: 1.2,
+    duration: 0.75,
+    delay: 0.15
 }
 
 const landscapeGraphicWidth = 1440
@@ -88,14 +99,6 @@ export function Hero() {
         <motion.section
             ref={setRefs}
             className="max-w-[1440px] mx-auto mt-16 md:mt-24 pb-24 md:pb-48 overflow-x-clip flex flex-col items-center"
-            initial={{ opacity: 0 }}
-            animate={{
-                opacity: 100,
-                transition: {
-                    duration: 1,
-                    ease: "easeIn"
-                }
-            }}
         >
             <div
                 className="flex justify-center items-center"
@@ -117,26 +120,26 @@ export function Hero() {
                     }}
                     className={`relative grid grid-cols-2 font-extralight whitespace-nowrap`}
                     initial={{
-                        background: "radial-gradient(41.02% 54.97% at 50% 50%, #101010 14.36%, #101010 60.9%)",
+                        background: `radial-gradient(${isLandscape ? `41.02% 84.97%` : `81.02%  54.97%`} at 50% 50%, #101010 14.36%, #101010 60.9%)`,
                     }}
                     animate={animationName}
                     variants={{
                         firstAnimation: {
-                            background: "radial-gradient(41.02% 54.97% at 50% 50%, #111111 14.36%, #101010 60.9%)",
-                            transition: transitionTween,
+                            background: `radial-gradient(${isLandscape ? `41.02% 84.97%` : `81.02%  54.97%`} at 50% 50%, #101010 14.36%, #101010 30.9%)`,
+                            transition: transition1,
                         },
                         secondAnimation: {
-                            background: "radial-gradient(41.02% 54.97% at 50% 50%, #333333 10.36%, #101010 60.9%)",
-                            transition: transitionSpring,
+                            background: `radial-gradient(${isLandscape ? `41.02% 84.97%` : `81.02%  54.97%`} at 50% 50%, #555555 10.36%, #101010 60.9%)`,
+                            transition: transition2A,
                         },
-                    }}
-                    onAnimationComplete={() => {
-                        if (animationName === "firstAnimation") {
-                            setAnimationName("secondAnimation")
-                        }
-                        if (animationName === "secondAnimation") {
-                            // setIsAnimationComplete(true)
-                        }
+                        thirdAnimation: {
+                            background: `radial-gradient(${isLandscape ? `41.02% 84.97%` : `81.02%  54.97%`} at 50% 50%, #222222 10.36%, #101010 40.9%)`,
+                            transition: {
+                                ...transition2A,
+                                duration: 0.5,
+                                delay: 0,
+                            },
+                        },
                     }}
                 >
                     <BackgroundLines className="absolute w-full h-full hero-mask">
@@ -146,7 +149,7 @@ export function Hero() {
                     <motion.div
                         className="absolute top-1/2 left-1/2 w-7 h-7"
                         style={{
-                            boxShadow: "0px 0px 64px 64px rgba(255, 255, 255, 0.25)",
+                            boxShadow: "0px 0px 64px 64px rgba(255, 255, 255, 0)",
                             filter: "blur(8px)"
                         }}
                         initial={{
@@ -158,18 +161,28 @@ export function Hero() {
                         animate={animationName}
                         variants={{
                             firstAnimation: {
-                                backgroundColor: "rgba(255,255,255,0.5)",
+                                backgroundColor: "rgba(255,255,255,0.01)",
+                                boxShadow: "0px 0px 64px 64px rgba(255, 255, 255, 0)",
                                 x: "-50%",
                                 y: "-50%",
                                 display: "none",
-                                transition: transitionTween,
+                                transition: transition1,
                             },
                             secondAnimation: {
-                                backgroundColor: "rgba(255,255,255,0.5)",
+                                backgroundColor: "rgba(255,255,255,0.75)",
+                                boxShadow: "0px 0px 64px 64px rgba(255, 255, 255, 0.25)",
                                 x: "-50%",
                                 y: "-50%",
                                 display: "block",
-                                transition: transitionSpring,
+                                transition: transition2A,
+                            },
+                            thirdAnimation: {
+                                backgroundColor: "rgba(255,255,255,0.75)",
+                                boxShadow: "0px 0px 64px 64px rgba(255, 255, 255, 0.4)",
+                                x: "-50%",
+                                y: "-50%",
+                                display: "block",
+                                transition: transition2A,
                             },
                         }}
                     >
@@ -183,12 +196,17 @@ export function Hero() {
                             firstAnimation: {
                                 top: "5%",
                                 opacity: 0.01,
-                                transition: transitionTween,
+                                transition: transition1,
                             },
                             secondAnimation: {
                                 top: "10%",
                                 opacity: 1,
-                                transition: transitionSpring,
+                                transition: transition2,
+                            },
+                            thirdAnimation: {
+                                top: "10%",
+                                opacity: 1,
+                                transition: transition2,
                             },
                         }}
                     >
@@ -197,93 +215,91 @@ export function Hero() {
                         </h1>
                     </motion.div>
                     {/* LEFT BRAIN CONTAINER */}
-                    <div className="relative col-span-1">
+                    <motion.div
+                        className="relative col-span-1"
+                        initial={{ x: isLandscape ? -100 : -50, opacity: 0.01 }}
+                        animate={animationName}
+                        variants={{
+                            firstAnimation: {
+                                x: isLandscape ? -200 : -100,
+                                opacity: 0.99,
+                                transition: transition1
+                            },
+                            secondAnimation: {
+                                x: 0,
+                                opacity: 1,
+                                transition: transition2
+                            },
+                            thirdAnimation: {
+                                x: 0,
+                                opacity: 1,
+                                transition: transition2
+                            },
+                        }}
+                    >
                         <motion.div
-                            className="absolute right-0 top-1/2 cursor-pointer"
+                            className="absolute right-0 top-1/2 cursor-pointer -translate-y-1/2"
                             tabIndex={-1}
-                            initial={{ x: -400, y: "-50%", opacity: 0.1 }}
-                            animate={animationName}
-                            variants={{
-                                firstAnimation: {
-                                    x: -50,
-                                    opacity: 0.9,
-                                    transition: transitionTween,
-                                },
-                                secondAnimation: {
-                                    x: 0,
-                                    opacity: 1,
-                                    transition: transitionSpring,
-                                },
-                            }}
+
                             onClick={handleBrainClick}
                         >
                             {/* <LeftBrain isAnimationComplete={isAnimationComplete} /> */}
                             <img src="/images/brain-left.svg" alt="" />
                         </motion.div>
-                        <motion.h2
-                            className="text-white1 text-right text-[48px] font-normal absolute right-12 top-1/2"
-                            initial={{ x: -300, y: "-50%", opacity: 0 }}
-                            animate={animationName}
-                            variants={{
-                                firstAnimation: {
-                                    x: -150,
-                                    opacity: 0.01,
-                                    transition: transitionTween,
-                                },
-                                secondAnimation: {
-                                    x: -25,
-                                    opacity: 1,
-                                    transition: transitionSpring,
-                                },
-                            }}
+                        <h2
+                            className="text-white1 text-right text-[48px] font-normal absolute right-12 top-1/2 -translate-y-1/2"
                         >
                             Opinionated <br /> designer
-                        </motion.h2>
-                    </div>
+                        </h2>
+                    </motion.div>
                     {/* RIGHT BRAIN CONTAINER */}
-                    <div className="relative col-span-1">
-                        <motion.div
-                            className="absolute left-0 top-1/2 cursor-pointer"
+                    <motion.div
+                        className="relative col-span-1"
+                        initial={{ x: isLandscape ? 100 : 50, opacity: 0.01 }}
+                        animate={animationName}
+                        variants={{
+                            firstAnimation: {
+                                x: isLandscape ? 200 : 100,
+                                opacity: 0.99,
+                                transition: {
+                                    ...transition1,
+                                    delay: 1
+                                }
+                            },
+                            secondAnimation: {
+                                x: 0,
+                                opacity: 1,
+                                transition: transition2
+                            },
+                            thirdAnimation: {
+                                x: 0,
+                                opacity: 1,
+                                transition: transition2
+                            },
+                        }}
+                        onAnimationComplete={() => {
+                            if (animationName === "firstAnimation") {
+                                setAnimationName("secondAnimation")
+                            }
+                            if (animationName === "secondAnimation") {
+                                setAnimationName("thirdAnimation")
+                            }
+                        }}
+                    >
+                        <div
+                            className="absolute left-0 top-1/2 cursor-pointer -translate-y-1/2"
                             tabIndex={-1}
-                            initial={{ x: 400, y: "-50%", opacity: 0.1 }}
-                            animate={animationName}
-                            variants={{
-                                firstAnimation: {
-                                    x: 50,
-                                    opacity: 0.9,
-                                    transition: transitionTween,
-                                },
-                                secondAnimation: {
-                                    x: 0,
-                                    opacity: 1,
-                                    transition: transitionSpring,
-                                },
-                            }}
                             onClick={handleBrainClick}
                         >
                             <img src="/images/brain-right.svg" alt="" />
                             {/* <RightBrain isAnimationComplete={isAnimationComplete} /> */}
-                        </motion.div>
-                        <motion.h2
-                            className="text-white1 text-left text-[48px] font-normal absolute left-12 top-1/2"
-                            initial={{ x: 300, y: "-50%", opacity: 0 }}
-                            animate={animationName}
-                            variants={{
-                                firstAnimation: {
-                                    x: 150,
-                                    opacity: 0.01,
-                                    transition: transitionTween,
-                                },
-                                secondAnimation: {
-                                    x: 25,
-                                    opacity: 1,
-                                    transition: transitionSpring,
-                                },
-                            }}
+                        </div>
+                        <h2
+                            className="text-white1 text-left text-[48px] font-normal absolute left-12 top-1/2 -translate-y-1/2"
                         >
                             Action biased <br /> engineer
-                        </motion.h2>
-                    </div>
+                        </h2>
+                    </motion.div>
                 </motion.div>
             </div>
             {/* TITLE */}
@@ -296,12 +312,17 @@ export function Hero() {
                     firstAnimation: {
                         opacity: 0,
                         transform: `scale(${scale})`,
-                        transition: transitionTween,
+                        transition: transition1,
                     },
                     secondAnimation: {
                         opacity: 1,
                         transform: `scale(${scale})`,
-                        transition: transitionSpring,
+                        transition: transition2,
+                    },
+                    thirdAnimation: {
+                        opacity: 1,
+                        transform: `scale(${scale})`,
+                        transition: transition2,
                     },
                 }}
             >

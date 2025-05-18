@@ -10,7 +10,7 @@ import {
 export function Greeting({ userIp }: { userIp: string }) {
     return (
         <motion.section
-            className="mx-4 w-dvh h-dvh text-center bg-backgroundGrid bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
+            className="mx-4 w-dvh h-dvh text-center bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
             initial={{ opacity: 0 }}
             animate={{
                 opacity: 100,

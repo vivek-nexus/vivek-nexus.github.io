@@ -50,14 +50,14 @@ export default function Home() {
 
         showPageTimeout = setTimeout(() => {
           setShowPage(true)
-        }, 7500)
+        }, 8000)
 
         scrollToAnchorTimeout = setTimeout(() => {
           const hash = window.location.hash
           if (hash) {
             document.querySelector(hash)?.scrollIntoView()
           }
-        }, 7700)
+        }, 8200)
       })
 
     return (() => {

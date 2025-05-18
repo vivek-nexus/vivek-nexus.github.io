@@ -45,7 +45,7 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
     return (
         <button
             ref={ref}
-            className={`design-value-card ${inView ? 'div-shimmer' : ''} group cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl overflow-clip flex justify-center items-center text-base md:text-lg lg:text-2xl ${className ? className : ``}`}
+            className={`design-value-card ${inView ? 'div-shimmer' : ''} group cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl overflow-clip flex justify-center items-center text-base md:text-lg lg:text-2xl will-change-transform ${className ? className : ``}`}
             style={{
                 // Gradient border
                 border: "solid 1px transparent",

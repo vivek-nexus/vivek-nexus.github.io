@@ -216,7 +216,7 @@ export function Hero() {
                     </motion.div>
                     {/* LEFT BRAIN CONTAINER */}
                     <motion.div
-                        className="relative col-span-1"
+                        className="relative col-span-1 will-change-transform"
                         initial={{ x: isLandscape ? -100 : -50, opacity: 0.01 }}
                         animate={animationName}
                         variants={{
@@ -254,7 +254,7 @@ export function Hero() {
                     </motion.div>
                     {/* RIGHT BRAIN CONTAINER */}
                     <motion.div
-                        className="relative col-span-1"
+                        className="relative col-span-1 will-change-transform"
                         initial={{ x: isLandscape ? 100 : 50, opacity: 0.01 }}
                         animate={animationName}
                         variants={{

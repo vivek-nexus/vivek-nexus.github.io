@@ -101,7 +101,7 @@ export const TestimonialCard = ({
         <div
             ref={containerRef}
             className={cn(
-                `scroller relative z-20 max-w-full ${isTouchDevice ? `px-6 overflow-auto` : `overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]`}`,
+                `scroller relative z-20 max-w-full ${isTouchDevice ? `px-6 overflow-auto` : `overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] will-change-transform`}`,
                 className
             )}
         >

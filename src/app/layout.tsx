@@ -63,7 +63,8 @@ export default function RootLayout({
       </Script>
 
       <head>
-        <link rel="preload" as="image" href="/images/background-grid.svg" />
+        <link rel="preload" as="image" href="/images/brain-left.svg" />
+        <link rel="preload" as="image" href="/images/brain-right.svg" />
       </head>
       {/* Absolutely positioned <hr> in the design section takes up more than screen width (100vw includes scrollbar width. Hence simplest solution is to clip it off.*/}
       <body

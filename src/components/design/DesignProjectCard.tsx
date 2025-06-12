@@ -54,11 +54,11 @@ export function DesignProjectCard(
                 <div
                     className="col-span-2 lg:col-span-1 order-2 lg:order-1">
                     <div className="mb-12 md:mb-16">
-                        <p
+                        <h3
                             className="font-extralight text-white1 text-2xl md:text-4xl mb-6"
                         >
                             {title}
-                        </p>
+                        </h3>
                         <p className="mb-4">{description} </p>
                         <div className="py-2 flex md:flex-col gap-4 md:gap-2 mb-4 whitespace-nowrap overflow-x-auto">
                             {skills.map((skill) => {

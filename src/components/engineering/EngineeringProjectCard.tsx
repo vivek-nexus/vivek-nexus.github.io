@@ -40,7 +40,7 @@ export function EngineeringProjectCard(
             <img src="/icons/plus.svg" alt="" className="absolute -bottom-[11px] -left-[11px]" />
             <img src="/icons/plus.svg" alt="" className="absolute -bottom-[11px] -right-[11px]" />
             <div className="flex justify-between items-center mb-4">
-                <p className="text-2xl md:text-4xl">{title}</p>
+                <h3 className="text-2xl md:text-4xl">{title}</h3>
                 <a href={repoLink} target="_blank">
                     <img src="/icons/github.svg" alt="GitHub icon" className="h-8 md:h-12 opacity-75" />
                 </a>

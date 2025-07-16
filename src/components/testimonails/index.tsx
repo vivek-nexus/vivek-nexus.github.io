@@ -1,15 +1,15 @@
 import { testimonials } from "@/constants/testimonials"
 import { TestimonialCard } from "./TestimonialCard"
-import Confetti from 'react-confetti'
+// import Confetti from 'react-confetti'
 
 export function Testimonials() {
     return (
         <section id="testimonials" className="relative overflow-y-clip">
-            <Confetti
+            {/* <Confetti
                 opacity={0.5}
                 numberOfPieces={25}
                 className="w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]"
-            />
+            /> */}
             <div
                 className="rounded-md flex flex-col items-center justify-center relative overflow-hidden bg-contain bg-center bg-opacity-10"
             >

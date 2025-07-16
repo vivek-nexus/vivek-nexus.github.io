@@ -49,8 +49,14 @@ html {
 
 
 .text-shimmer {
-    background-image: linear-gradient(to right, white 0%, white 100%);
-    background-size: 10% 100%;
+    color: transparent;
+    background-image:
+        linear-gradient(to right, transparent 40%, var(--black-1) 50%, transparent 60%),
+        linear-gradient(var(--white-1), var(--white-1));
+    /* Background sizes for the two layers:
+    - The first background (shimmer) is 250% wide to ensure it can fully sweep across the text.
+    - The second background (base text color) is 100% wide, covering the element. */
+    background-size: 250% 100%, 100% 100%;
     background-clip: text;
     background-repeat: no-repeat;
     animation: shimmer linear 4s infinite;
@@ -58,11 +64,11 @@ html {
 
 @keyframes shimmer {
     0% {
-        background-position: -100% top;
+        background-position: 250% top;
     }
 
     100% {
-        background-position: 200% top;
+        background-position: 0% top;
     }
 }
 

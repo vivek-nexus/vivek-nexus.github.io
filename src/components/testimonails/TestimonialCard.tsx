@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import { Lora } from "next/font/google"
 import React, { useEffect, useState } from "react"
 
+
 const lora = Lora({
     subsets: ["latin"],
     style: "italic"
@@ -115,7 +116,7 @@ export const TestimonialCard = ({
             >
                 {items.map((item) => (
                     <li
-                        className="group w-[80vw] md:w-[40vw] h-fit relative border border-white/25 bg-gradient-to-t from-purple1/25 to-black1 text-white2 rounded-xl flex-shrink-0 p-9 shadow-whiteGlow1 bg-center bg-cover"
+                        className="group w-[80vmin] md:w-[40vmin] h-fit relative border border-white/25 bg-gradient-to-t from-purple1/25 to-black1 text-white2 rounded-xl flex-shrink-0 p-9 shadow-whiteGlow1 bg-center bg-cover"
                         key={item.name}
                     >
                         <p

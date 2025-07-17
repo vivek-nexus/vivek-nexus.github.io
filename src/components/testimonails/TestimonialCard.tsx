@@ -116,7 +116,7 @@ export const TestimonialCard = ({
             >
                 {items.map((item) => (
                     <li
-                        className="group w-[80vmin] md:w-[40vmin] h-fit relative border border-white/25 bg-gradient-to-t from-purple1/25 to-black1 text-white2 rounded-xl flex-shrink-0 p-9 shadow-whiteGlow1 bg-center bg-cover"
+                        className="group w-[80vmin] md:w-[60vmin] h-fit relative border border-white/25 bg-gradient-to-t from-purple1/25 to-black1 text-white2 rounded-xl flex-shrink-0 p-9 shadow-whiteGlow1 bg-center bg-cover"
                         key={item.name}
                     >
                         <p
@@ -124,7 +124,7 @@ export const TestimonialCard = ({
                         >
                             “
                         </p>
-                        <div className="pb-8 text-white2 font-light max-h-64 overflow-y-auto hide-scroll-bar [mask-image:linear-gradient(to_top,transparent,white_20%)]">
+                        <div className="pb-8 text-white2 font-light max-h-72 overflow-y-auto hide-scroll-bar [mask-image:linear-gradient(to_top,transparent,white_20%)]">
                             <p className="whitespace-pre-wrap">
                                 {item.quote}
                             </p>

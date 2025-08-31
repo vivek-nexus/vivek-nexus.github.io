@@ -17,7 +17,7 @@ export const designProjects = [
         gradientColourHex: "30845A",
         gradientStartOpacity: 95,
         title: "Design conversations",
-        description: "WhatsApp conversation design and prototyping UI kit for Figma. Top community resource with 20k+ downloads.",
+        description: "WhatsApp conversation design and prototyping UI kit for Figma. Top community resource with 25k+ downloads.",
         skills: ["Advanced auto layout", "Rapid prototyping", "Figma components"],
         quote: "Insane. Thanks so much! It saved me hours of hard working here.",
         linkText: "Figma community",

@@ -8,7 +8,7 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
     const [showText1, setShowText1] = useState(true)
     const [showText2, setShowText2] = useState(false)
     const card = useRef<HTMLButtonElement>(null)
-    const { ref, inView } = useInView({ threshold: 0 })
+    const { ref, inView } = useInView({ threshold: 0, triggerOnce: true })
 
     function handleMouseEnter() {
         setShowText1(false)
@@ -42,10 +42,23 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
         }
     }, [])
 
+    useEffect(() => {
+        setShowText1(false)
+        setShowText2(true)
+        const timeOut = setTimeout(() => {
+            setShowText1(true)
+            setShowText2(false)
+        }, 1500)
+
+        return (() => {
+            clearTimeout(timeOut)
+        })
+    }, [inView])
+
     return (
         <button
             ref={ref}
-            className={`design-value-card ${inView ? 'div-shimmer' : ''} group cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl overflow-clip flex justify-center items-center text-base md:text-lg lg:text-2xl will-change-transform ${className ? className : ``}`}
+            className={`design-value-card group cursor-default relative w-36 md:w-48 lg:w-64 h-24 md:h-36 lg:h-48 rounded-xl lg:rounded-3xl overflow-clip flex justify-center items-center text-base md:text-lg lg:text-2xl will-change-transform ${className ? className : ``}`}
             style={{
                 // Gradient border
                 border: "solid 1px transparent",

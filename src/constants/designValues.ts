@@ -8,8 +8,8 @@ export const designValues = {
         text2: "...but usually does not create it"
     },
     3: {
-        text1: "Craft powers impressive stories",
-        text2: "...usability powers the after story"
+        text1: "Great craft and stories pull people",
+        text2: "...usability makes them stay"
     },
     4: {
         text1: "Everything in the world is designed",

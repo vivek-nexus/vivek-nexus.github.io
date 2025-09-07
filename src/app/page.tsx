@@ -17,7 +17,7 @@ export default function Home() {
   const [showGreeting, setShowGreeting] = useState(false)
   const [showHero, setShowHero] = useState(false)
   const [showPage, setShowPage] = useState(false)
-  const [userIp, setUserIp] = useState("<getting your ip address>")
+  const [userIp, setUserIp] = useState("10.32.45.78")
 
   let hideGreetingTimeout: NodeJS.Timeout
   let showHeroTimeout: NodeJS.Timeout
@@ -26,9 +26,18 @@ export default function Home() {
 
   useIsTouchDevice()
 
+  const controller = new AbortController()
+  const signal = controller.signal
+
+  const timeoutId = setTimeout(() => {
+    controller.abort()
+  }, 2500)
+
+
   useEffect(() => {
-    fetch("https://express.viveknexus.com/ip")
+    fetch("https://express.viveknexus.com/ip", { signal })
       .then((response) => {
+        clearTimeout(timeoutId)
         response.text()
           .then((text) => {
             setUserIp(text)
@@ -36,6 +45,7 @@ export default function Home() {
           })
       })
       .catch((err) => {
+        setShowGreeting(true)
         console.error(err)
       })
       .finally(() => {

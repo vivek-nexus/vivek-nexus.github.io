@@ -43,16 +43,17 @@ export function DesignValueCard({ number, className }: { number: 1 | 2 | 3 | 4, 
     }, [])
 
     useEffect(() => {
-        setShowText1(false)
-        setShowText2(true)
-        const timeOut = setTimeout(() => {
-            setShowText1(true)
-            setShowText2(false)
-        }, 1500)
-
-        return (() => {
-            clearTimeout(timeOut)
-        })
+        if ((number === 1) || (number === 2)) {
+            setShowText1(false)
+            setShowText2(true)
+            const timeOut = setTimeout(() => {
+                setShowText1(true)
+                setShowText2(false)
+            }, 1500)
+            return (() => {
+                clearTimeout(timeOut)
+            })
+        }
     }, [inView])
 
     return (

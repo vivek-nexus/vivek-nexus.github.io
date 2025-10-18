@@ -6,17 +6,17 @@ export const engineeringProjects = [
         stats: [
             {
                 name: "Users",
-                value: "3000+/day",
+                value: "3000+",
                 iconURI: "user.svg"
             },
             {
                 name: "GitHub",
-                value: "118",
+                value: "130",
                 iconURI: "star.svg"
             },
             {
                 name: "Forks",
-                value: "48",
+                value: "55",
                 iconURI: "fork.svg"
             },
             {
@@ -30,14 +30,9 @@ export const engineeringProjects = [
     },
     {
         title: "Listen",
-        description: "Cross platform listening app. As intuitive as a music player.",
+        description: "Web app to listen, instead of reading. Responsive and  multi-lingual.",
         repoLink: "https://github.com/vivek-nexus/listen",
         stats: [
-            {
-                name: "Hits",
-                value: "100+/day",
-                iconURI: "user.svg"
-            },
             {
                 name: "GitHub",
                 value: "28",
@@ -54,12 +49,12 @@ export const engineeringProjects = [
         stats: [
             {
                 name: "Users",
-                value: "5800+",
+                value: "6000+",
                 iconURI: "user.svg"
             },
             {
                 name: "Likes",
-                value: "113",
+                value: "122",
                 iconURI: "heart.svg"
             }
         ],

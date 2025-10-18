@@ -34,6 +34,11 @@ export const engineeringProjects = [
         repoLink: "https://github.com/vivek-nexus/listen",
         stats: [
             {
+                name: "Users",
+                value: "Mostly me",
+                iconURI: "user.svg"
+            },
+            {
                 name: "GitHub",
                 value: "28",
                 iconURI: "star.svg"

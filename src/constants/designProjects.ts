@@ -3,7 +3,7 @@ export const designProjects = [
         gradientColourHex: "803B85",
         gradientStartOpacity: 75,
         title: "Share financial data",
-        description: "Enabling Indian citizens to take control of how they share financial data. Consented data sharing powered by the Account Aggregator framework introduced by the Reserve Bank of India.",
+        description: "Enabling Indian citizens to take control of how they share financial data. Led the 0 -> 1 journey of the Account Aggregator product.",
         skills: ["UX Design", "Frontend", "Motion design"],
         quote: "Hands down one of the best UX in the industry",
         linkText: "Design story",

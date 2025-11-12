@@ -8,8 +8,8 @@ export const designValues = {
         text2: "...but usually does not create it"
     },
     3: {
-        text1: "Polish and excellence pulls people",
-        text2: "...care makes them stay"
+        text1: "Great stories pull people",
+        text2: "...value makes them stay"
     },
     4: {
         text1: "Everyone is designing",

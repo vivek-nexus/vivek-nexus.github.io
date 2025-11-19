@@ -238,16 +238,17 @@ export function Hero() {
                         }}
                     >
                         <motion.div
-                            className="absolute right-0 top-1/2 cursor-pointer -translate-y-1/2"
+                            className="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer"
                             tabIndex={-1}
-
                             onClick={handleBrainClick}
                         >
                             {/* <LeftBrain isAnimationComplete={isAnimationComplete} /> */}
                             <img src="/images/brain-left.svg" alt="" />
                         </motion.div>
                         <h2
-                            className="text-white1 text-right text-[48px] font-normal absolute right-12 top-1/2 -translate-y-1/2"
+                            className="text-white1 text-right text-[48px] font-normal absolute right-12 top-1/2 -translate-y-1/2 cursor-pointer"
+                            tabIndex={-1}
+                            onClick={handleBrainClick}
                         >
                             Opinionated <br /> designer
                         </h2>
@@ -287,7 +288,7 @@ export function Hero() {
                         }}
                     >
                         <div
-                            className="absolute left-0 top-1/2 cursor-pointer -translate-y-1/2"
+                            className="absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer"
                             tabIndex={-1}
                             onClick={handleBrainClick}
                         >
@@ -295,7 +296,9 @@ export function Hero() {
                             {/* <RightBrain isAnimationComplete={isAnimationComplete} /> */}
                         </div>
                         <h2
-                            className="text-white1 text-left text-[48px] font-normal absolute left-12 top-1/2 -translate-y-1/2"
+                            className="text-white1 text-left text-[48px] font-normal absolute left-12 top-1/2 -translate-y-1/2 cursor-pointer"
+                            tabIndex={-1}
+                            onClick={handleBrainClick}
                         >
                             Action biased <br /> engineer
                         </h2>

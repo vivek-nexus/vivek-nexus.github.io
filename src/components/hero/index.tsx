@@ -332,7 +332,10 @@ export function Hero() {
                 {/* Increased dimensions to prevent text being unreadable in mobile */}
                 <img src="/icons/briefcase-icon.svg" alt="Briefcase icon" className={`${isLandscape ? `h-auto` : `h-8`}`} />
                 <p className={`text-white1 text-center ${isLandscape ? `text-2xl` : `text-4xl`} font-extralight whitespace-nowrap`}>
-                    Senior Product Designer at BrowserStack
+                    Senior Product Designer at&nbsp;
+                    <a className="bg-gradient-to-r from-primaryGreen to-primaryBlue text-gradient" href="https://browserstack.com" target="_blank">
+                        <b>BrowserStack</b>
+                    </a>
                 </p>
             </motion.div>
         </motion.section>

@@ -77,19 +77,19 @@ export function DesignProjectCard(
                         }
                     </div>
                     <a
-                        href={hyperLink}
-                        target="_blank"
+                        href={hyperLink ? hyperLink : "#contact"}
+                        target={hyperLink ? "_blank" : ""}
                         className="w-fit px-4 py-2 mb-1 md:mb-0 rounded-lg text-white font-medium flex gap-1 items-center group"
                         style={{
                             backgroundImage: `linear-gradient(180deg,#${gradientColourHex} 0%, #${gradientColourHex + buttonGradientEndOpacity} 100% )`
                         }}
                     >
                         {linkText}
-                        <img
+                        {hyperLink && <img
                             src="/icons/north-east-arrow.svg"
                             alt="North east arrow icon indicating that the link opens in a new tab"
                             className="h-4 group-hover:translate-x-1 group-hover:-translate-y-1 duration-300 ease-in-out"
-                        />
+                        />}
                     </a>
                 </div>
                 <div

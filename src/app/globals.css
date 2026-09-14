@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+:root {
     --black-1: #101010;
     --white-1: #DFDFDF;
     --white-2: #C0C0C0;
@@ -10,6 +10,55 @@
     --orange-1: #ff8770;
     --orange-2: #FF9326;
     --purple1: #803B85;
+}
+
+@theme {
+    /* Dynamic Background & Foreground Theme Variables */
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    /* Color Mappings to CSS Variables (Support both kebab-case and camelCase class names) */
+    --color-black1: var(--black-1);
+    --color-black-1: var(--black-1);
+
+    --color-white1: var(--white-1);
+    --color-white-1: var(--white-1);
+
+    --color-white2: var(--white-2);
+    --color-white-2: var(--white-2);
+
+    --color-white3: var(--white-3);
+    --color-white-3: var(--white-3);
+
+    --color-primary-green: var(--primary-green);
+    --color-primaryGreen: var(--primary-green);
+
+    --color-primary-blue: var(--primary-blue);
+    --color-primaryBlue: var(--primary-blue);
+
+    --color-orange1: var(--orange-1);
+    --color-orange-1: var(--orange-1);
+
+    --color-orange2: var(--orange-2);
+    --color-orange-2: var(--orange-2);
+
+    --color-purple1: var(--purple1);
+
+    /* Background Images */
+    --background-image-background-grid: url('/images/background-grid.svg');
+
+    /* Custom Box Shadows */
+    --shadow-whiteGlow1: inset 0px 0px 24px 4px rgba(255, 255, 255, 0.12);
+    --shadow-whiteGlow2: inset 0px 0px 16px 4px rgba(255, 255, 255, 0.16);
+
+    /* Animations & Keyframes */
+    --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 0.5rem));
+        }
+    }
 }
 
 html {

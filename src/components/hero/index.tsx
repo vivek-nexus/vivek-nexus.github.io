@@ -12,7 +12,7 @@ export const transition1 = {
     damping: 30,
     mass: 1.2,
     duration: 1,
-}
+} as const
 
 export const transition2 = {
     type: "spring",
@@ -20,7 +20,7 @@ export const transition2 = {
     damping: 30,
     mass: 1.2,
     duration: 1,
-}
+} as const
 
 // For white bg splash
 export const transition2A = {
@@ -30,7 +30,7 @@ export const transition2A = {
     mass: 1.2,
     duration: 0.75,
     delay: 0.15
-}
+} as const
 
 const landscapeGraphicWidth = 1440
 const portraitGraphicWidth = 900

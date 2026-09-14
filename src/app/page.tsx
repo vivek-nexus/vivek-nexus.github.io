@@ -80,7 +80,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="p-2 fixed left-0 top-0 focus-within:z-50 -translate-x-[1000px] focus-within:translate-x-0">
+      <div className="p-2 fixed left-0 top-0 focus-within:z-50 translate-x-[-1000px] focus-within:translate-x-0">
         <button
           className="mr-2 p-2 bg-black1 rounded-md border border-white2/50"
           onClick={() => {

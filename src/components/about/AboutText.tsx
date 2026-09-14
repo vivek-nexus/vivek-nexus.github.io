@@ -39,7 +39,7 @@ export function AboutText({ number }: { number: number }) {
                             >
                                 <TooltipTrigger asChild>
                                     <button
-                                        className="font-bold bg-gradient-to-r from-primaryGreen to-primaryBlue text-gradient"
+                                        className="font-bold bg-linear-to-r from-primaryGreen to-primaryBlue text-gradient"
                                     >
                                         random example.
                                     </button>

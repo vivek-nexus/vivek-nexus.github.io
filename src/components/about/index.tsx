@@ -41,7 +41,7 @@ export function About() {
             <div className="hidden md:block text-lg lg:text-xl">
                 <div className="grid grid-cols-3 gap-6 mb-6">
                     <div
-                        className="col-span-3 md:col-span-2 h-64 rounded-2xl hover:shadow-whiteGlow2 duration-200 ease-in p-8 bg-gradient-to-tl from-primaryBlue/40 to-primaryBlue/0 border border-white3 flex items-center"
+                        className="col-span-3 md:col-span-2 h-64 rounded-2xl hover:shadow-whiteGlow2 duration-200 ease-in p-8 bg-linear-to-tl from-primaryBlue/40 to-primaryBlue/0 border border-white3 flex items-center"
                     >
                         <AboutText number={1} />
                     </div>
@@ -59,7 +59,7 @@ export function About() {
                 </div>
                 <div className="grid grid-cols-3 gap-6 mb-6">
                     <div
-                        className="col-span-3 md:col-span-1 h-64 rounded-2xl hover:shadow-whiteGlow2 duration-200 ease-in p-8 bg-gradient-to-l from-primaryBlue/40 to-primaryBlue/0 border border-white3 flex items-center"
+                        className="col-span-3 md:col-span-1 h-64 rounded-2xl hover:shadow-whiteGlow2 duration-200 ease-in p-8 bg-linear-to-l from-primaryBlue/40 to-primaryBlue/0 border border-white3 flex items-center"
                     >
                         <AboutText number={2} />
                     </div>
@@ -72,14 +72,14 @@ export function About() {
                         <img src="/images/face-caricature.svg" alt="Caricature of my face" />
                     </div>
                     <div
-                        className="col-span-3 md:col-span-1 h-64 rounded-2xl hover:shadow-whiteGlow2 duration-200 ease-in p-8 bg-gradient-to-r from-primaryBlue/40 to-primaryBlue/0 border border-white3 flex items-center"
+                        className="col-span-3 md:col-span-1 h-64 rounded-2xl hover:shadow-whiteGlow2 duration-200 ease-in p-8 bg-linear-to-r from-primaryBlue/40 to-primaryBlue/0 border border-white3 flex items-center"
                     >
                         <AboutText number={3} />
                     </div>
                 </div>
                 <div className="grid grid-cols-3 gap-6">
                     <div
-                        className="col-span-3 md:col-span-1 h-64 rounded-2xl hover:shadow-whiteGlow2 duration-200 ease-in p-8 bg-gradient-to-bl from-primaryBlue/40 to-primaryBlue/0 border border-white3 flex items-center"
+                        className="col-span-3 md:col-span-1 h-64 rounded-2xl hover:shadow-whiteGlow2 duration-200 ease-in p-8 bg-linear-to-bl from-primaryBlue/40 to-primaryBlue/0 border border-white3 flex items-center"
                     >
                         <AboutText number={4} />
                     </div>

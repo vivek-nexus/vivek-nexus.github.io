@@ -35,10 +35,10 @@ export function EngineeringProjectCard(
                 backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23666666FF' stroke-width='4' stroke-dasharray='6%2c12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e")`
             }}
         >
-            <img src="/icons/plus.svg" alt="" className="absolute -top-[11px] -left-[11px]" />
-            <img src="/icons/plus.svg" alt="" className="absolute -top-[11px] -right-[11px]" />
-            <img src="/icons/plus.svg" alt="" className="absolute -bottom-[11px] -left-[11px]" />
-            <img src="/icons/plus.svg" alt="" className="absolute -bottom-[11px] -right-[11px]" />
+            <img src="/icons/plus.svg" alt="" className="absolute top-[-11px] left-[-11px]" />
+            <img src="/icons/plus.svg" alt="" className="absolute top-[-11px] right-[-11px]" />
+            <img src="/icons/plus.svg" alt="" className="absolute bottom-[-11px] left-[-11px]" />
+            <img src="/icons/plus.svg" alt="" className="absolute bottom-[-11px] right-[-11px]" />
             <div className="flex justify-between items-center mb-4">
                 <h3 className="text-2xl md:text-4xl">{title}</h3>
                 <a href={repoLink} target="_blank">

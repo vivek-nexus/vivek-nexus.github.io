@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 :root {
     --black-1: #101010;
@@ -163,121 +161,121 @@ html {
 @property --c-0 {
     syntax: '<color>';
     inherits: false;
-    initial-value: hsla(216.63716814159295, 91%, 24%, 1)
+    initial-value: hsla(216.63716814159295, 91%, 24%, 1);
 }
 
 @property --x-0 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 34%
+    initial-value: 34%;
 }
 
 @property --y-0 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 50%
+    initial-value: 50%;
 }
 
 @property --s-start-0 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 8%
+    initial-value: 8%;
 }
 
 @property --s-end-0 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 86%
+    initial-value: 86%;
 }
 
 @property --c-1 {
     syntax: '<color>';
     inherits: false;
-    initial-value: hsla(162.24, 100%, 24%, 1)
+    initial-value: hsla(162.24, 100%, 24%, 1);
 }
 
 @property --x-1 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 71%
+    initial-value: 71%;
 }
 
 @property --y-1 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 72%
+    initial-value: 72%;
 }
 
 @property --s-start-1 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 8%
+    initial-value: 8%;
 }
 
 @property --s-end-1 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 86%
+    initial-value: 86%;
 }
 
 @property --c-2 {
     syntax: '<color>';
     inherits: false;
-    initial-value: hsla(266, 60%, 58%, 0)
+    initial-value: hsla(266, 60%, 58%, 0);
 }
 
 @property --x-2 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 57%
+    initial-value: 57%;
 }
 
 @property --y-2 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 28%
+    initial-value: 28%;
 }
 
 @property --s-start-2 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 8%
+    initial-value: 8%;
 }
 
 @property --s-end-2 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 86%
+    initial-value: 86%;
 }
 
 @property --c-3 {
     syntax: '<color>';
     inherits: false;
-    initial-value: hsla(309, 68%, 82%, 0)
+    initial-value: hsla(309, 68%, 82%, 0);
 }
 
 @property --x-3 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 16%
+    initial-value: 16%;
 }
 
 @property --y-3 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 43%
+    initial-value: 43%;
 }
 
 @property --s-start-3 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 8%
+    initial-value: 8%;
 }
 
 @property --s-end-3 {
     syntax: '<percentage>';
     inherits: false;
-    initial-value: 86%
+    initial-value: 86%;
 }
 
 .animated-mesh-gradient {

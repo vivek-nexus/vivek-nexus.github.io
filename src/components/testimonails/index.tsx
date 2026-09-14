@@ -8,7 +8,7 @@ export function Testimonials() {
             {/* <Confetti
                 opacity={0.5}
                 numberOfPieces={25}
-                className="w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]"
+                className="w-full mask-[linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]"
             /> */}
             <div
                 className="rounded-md flex flex-col items-center justify-center relative overflow-hidden bg-contain bg-center bg-opacity-10"

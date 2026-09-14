@@ -26,7 +26,7 @@ export function Engineering() {
         <section
             ref={ref}
             id="engineering"
-            className={`relative ${spaceMono.className} py-36 md:py-48 [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_95%,transparent)]`}
+            className={`relative ${spaceMono.className} py-36 md:py-48 mask-[linear-gradient(to_bottom,transparent,white_10%,white_95%,transparent)]`}
         >
             <ShootingStars
                 minDelay={250}
